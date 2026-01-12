@@ -1,6 +1,7 @@
 
 class Player:
-    def __init__(self, funds):
+    def __init__(self, player_name, funds):
+        self.player_name = player_name
         self.hand = []
         self.funds = funds
         self.bet = 0
@@ -55,3 +56,12 @@ class Player:
 
     def can_insurance(self):
         pass
+
+    def __repr__(self):
+        hand_str = ", ".join(str(card) for card in self.hand)
+        return (
+            f"Player(funds={self.funds}, "
+            f"bet={self.bet}, "
+            f"hand=[{hand_str}], "
+            f"total={self.hand_total()})"
+        )

@@ -3,6 +3,7 @@ import random
 class Deck:
     def __init__(self, list_cards):
         self.deck = list_cards.copy()
+        self.deck.shuffle()
 
     def shuffle(self):
         random.shuffle(self.deck)

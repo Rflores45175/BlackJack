@@ -28,3 +28,5 @@ class Card:
 
     def __str__(self):
         return self.card_name()
+
+    __repr__ = __str__
